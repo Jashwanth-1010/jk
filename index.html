@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>I'm Sorry, My Love</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      padding: 50px;
+      position: relative;
+      overflow-x: hidden;
+      animation: pageFadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes pageFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 { color: #e91e63; }
+    h2 { color: rgb(163, 38, 38); }
+    h3 { cursor: pointer; color: #e91e63; }
+
+    img {
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    #sorryMessage {
+      display: none;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffe6ec;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .emoji {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .forgive-button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .forgive-button:hover {
+      background-color: #d81b60;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      font-size: 24px;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background music (autoplay, loop, hidden) -->
+  <audio autoplay loop hidden>
+    <source src="jas.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>BANGARAMMM 💖</h1>
+  <h2>Na Bujjammaluu Kada</h2>
+  <h3>Click the image below 👇</h3>
+
+  <!-- Clickable image -->
+  <a href="#sorryMessage" onclick="showMessage()">
+    <img src="pic.jpg" alt="Our Photo">
+  </a>
+
+  <!-- Sorry message section -->
+  <div id="sorryMessage">
+    <h2>I'm Really Sorry <span class="emoji">🥺</span></h2>
+    <p>
+      I'm Soooo Sorry Bangaramm.<br>
+      My Forever-👀😘👸<br>
+      Ee 4 Days Nenu Ninnu Baga Hurt Chesa. Nenu Koncham Sodi Le, Koncham Hurt Aiyya, Daani Valla Ala Sodi La Ninnu Kuda Hurt Chesa Anthe. Kani Neeku Meda Love Taggindi Kadu, Yem Kadu.<br>
+      You Will Always Be My Wife, Pellam, Love, Girlfriend, Psycho, Idiot, Sodi Pilla, Na Esha, Sodi Moham, Manishowwww, Anything Wherething.....<br>
+      Yem Jarigina Sare, Nuv Vunte Chaalu, Naaku Inkem Vodhu...<br>
+      I Know I’ve Hurt You.<br>
+      You Mean The World To Me, And I Never Want To See You Sad Because Of Me.<br>
+      <strong>Then. Now. Forever.</strong><br>
+      <strong>I Love You ❤️</strong>
+    </p>
+
+    <a href="https://wa.me/917780566767?text=I%20forgive%20you%20🥹💗" class="forgive-button">Forgive Me 💌</a>
+  </div>
+
+  <!-- Floating hearts animation -->
+  <script>
+    function showMessage() {
+      document.getElementById('sorryMessage').style.display = 'block';
+      document.getElementById('sorryMessage').scrollIntoView({ behavior: "smooth" });
+    }
+
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+      heart.textContent = "❤️";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 400);
+  </script>
+
+</body>
+</html>
+
